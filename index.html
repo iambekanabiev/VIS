@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>VIS INC | Professional Trucking Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+
+<!-- ═══ INTRO ═══ -->
+<div id="intro">
+  <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg" fill="none">
+    <!-- Road -->
+    <defs>
+      <linearGradient id="rg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#111f35"/><stop offset="100%" stop-color="#0a1628"/></linearGradient>
+      <linearGradient id="hl" x1="0.5" y1="0" x2="0.5" y2="1"><stop offset="0%" stop-color="#e8e8c0" stop-opacity="0.9"/><stop offset="100%" stop-color="#e8e8c0" stop-opacity="0"/></linearGradient>
+      <filter id="glow"><feGaussianBlur in="SourceGraphic" stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    </defs>
+    <!-- Sky stars -->
+    <circle cx="50" cy="30" r="1.2" fill="#fff" opacity="0.5"/>
+    <circle cx="150" cy="15" r="0.9" fill="#fff" opacity="0.4"/>
+    <circle cx="280" cy="40" r="1.4" fill="#fff" opacity="0.5"/>
+    <circle cx="420" cy="20" r="1.0" fill="#fff" opacity="0.4"/>
+    <circle cx="560" cy="35" r="1.2" fill="#fff" opacity="0.5"/>
+    <circle cx="650" cy="10" r="0.8" fill="#fff" opacity="0.3"/>
+    <circle cx="100" cy="60" r="0.7" fill="#fff" opacity="0.4"/>
+    <circle cx="380" cy="55" r="1.0" fill="#fff" opacity="0.5"/>
+    <circle cx="610" cy="65" r="0.9" fill="#fff" opacity="0.3"/>
+    <!-- Road surface -->
+    <polygon points="230,160 470,160 700,280 0,280" fill="url(#rg)"/>
+    <!-- Road lines -->
+    <line x1="350" y1="160" x2="350" y2="280" stroke="#e8e0a0" stroke-width="2.5" stroke-dasharray="28,20" opacity="0.45"/>
+    <!-- Edges -->
+    <line x1="230" y1="160" x2="0" y2="280" stroke="#4ab3f4" stroke-width="1.5" opacity="0.35"/>
+    <line x1="470" y1="160" x2="700" y2="280" stroke="#4ab3f4" stroke-width="1.5" opacity="0.35"/>
+    <!-- Headlight beam -->
+    <polygon points="310,185 390,185 460,260 240,260" fill="url(#hl)" opacity="0.1" filter="url(#glow)"/>
+    <!-- Truck group - animated driving in -->
+    <g id="trk" transform="translate(700,80)">
+      <animateTransform attributeName="transform" type="translate" from="700,80" to="265,80" dur="1.8s" begin="0.2s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+      <!-- trailer -->
+      <rect x="0" y="28" width="170" height="72" rx="3" fill="#1a2d4a" stroke="#2a4d7a" stroke-width="1"/>
+      <rect x="3" y="31" width="164" height="66" rx="2" fill="#0f1e35"/>
+      <rect x="28" y="36" width="7" height="56" fill="#1a5fbf" opacity="0.5"/>
+      <rect x="42" y="36" width="7" height="56" fill="#4ab3f4" opacity="0.4"/>
+      <!-- cab -->
+      <rect x="170" y="38" width="66" height="62" rx="5" fill="#1a3055" stroke="#2a4d7a" stroke-width="1"/>
+      <rect x="182" y="45" width="42" height="28" rx="3" fill="#0a1628" opacity="0.9"/>
+      <rect x="183" y="46" width="40" height="26" rx="2" fill="#4ab3f4" opacity="0.07"/>
+      <!-- headlights -->
+      <rect x="232" y="76" width="6" height="9" rx="1.5" fill="#fffbe0" filter="url(#glow)"/>
+      <!-- wheels -->
+      <circle cx="42" cy="101" r="13" fill="#0a1628" stroke="#1a2d4a" stroke-width="2.5"/>
+      <circle cx="42" cy="101" r="6" fill="#111f35"/>
+      <circle cx="98" cy="101" r="13" fill="#0a1628" stroke="#1a2d4a" stroke-width="2.5"/>
+      <circle cx="98" cy="101" r="6" fill="#111f35"/>
+      <circle cx="198" cy="101" r="13" fill="#0a1628" stroke="#1a2d4a" stroke-width="2.5"/>
+      <circle cx="198" cy="101" r="6" fill="#111f35"/>
+    </g>
+  </svg>
+  <div id="intro-label">VIS <span>INC</span></div>
+  <div id="intro-sub">Professional Trucking Solutions</div>
+  <div id="intro-loader"></div>
+</div>
+
+<!-- ═══ NAV ═══ -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#home" class="nav-logo">
+      <img src="assets/vis-logo.jpg" alt="VIS INC"/>
+      <span class="nav-logo-text">VIS <em>INC</em></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#process">Drive With Us</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+19454006416" class="btn btn-outline btn-lg" style="border-color:rgba(74,179,244,0.5);color:#4ab3f4">(945) 400-6416</a>
+      <a href="#contact" class="btn btn-sky btn-lg">Apply to Drive</a>
+    </div>
+    <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mob-nav" id="mobnav">
+  <a href="#services">Services</a>
+  <a href="#about">About</a>
+  <a href="#process">Drive With Us</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact" class="btn btn-sky" style="margin-top:8px;justify-content:center">Apply to Drive</a>
+</div>
+
+<main>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <video autoplay muted loop playsinline id="heroBgVideo">
+      <source src="assets/hero-video.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-ov"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-pill"><span class="hero-dot"></span> USDOT 3842928 · Aurora, IL</div>
+      <h1 class="hero-h1">We Move<br><span class="sky">Freight</span><br><span class="ghost">Forward</span></h1>
+      <p class="hero-p">VIS INC delivers professional trucking solutions built on safety, reliability, and clear communication — across 48 states.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-sky btn-xl">Apply to Drive</a>
+        <a href="#services" class="btn btn-outline btn-xl">Our Services</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-arrow"><div class="sa"></div><div class="sa"></div><div class="sa"></div></div></div>
+  <div class="hero-bar">
+    <div class="container">
+      <div class="hero-bar-grid">
+        <a href="tel:+19454006416" class="hb-item">
+          <svg class="hb-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 3.09 4.23 2 2 0 0 1 5.07 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L9.91 9.91a16 16 0 0 0 6 6z"/></svg>
+          <span class="hb-label">Call Us Now</span>
+        </a>
+        <a href="#services" class="hb-item">
+          <svg class="hb-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16,8 20,8 23,11 23,16 16,16 16,8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          <span class="hb-label">Our Services</span>
+        </a>
+        <a href="#about" class="hb-item">
+          <svg class="hb-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span class="hb-label">About VIS INC</span>
+        </a>
+        <a href="#contact" class="hb-item">
+          <svg class="hb-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span class="hb-label">Apply to Drive</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STATS ═══ -->
+<div class="stats-band">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal"><span class="stat-num">48</span><span class="stat-label">States Covered</span></div>
+      <div class="stat-item reveal"><span class="stat-num">24/7</span><span class="stat-label">Dispatch Support</span></div>
+      <div class="stat-item reveal"><span class="stat-num">100%</span><span class="stat-label">Safety Focused</span></div>
+      <div class="stat-item reveal"><span class="stat-num">5★</span><span class="stat-label">Driver Rated</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SERVICES ═══ -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="center reveal">
+      <span class="sec-tag">What We Do</span>
+      <h2 class="sec-h">Professional Freight<br>Services</h2>
+      <p class="sec-p">Dependable trucking operations — focused, professional, and on time.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card reveal"><div class="svc-num">01</div><div class="svc-icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16,8 20,8 23,11 23,16 16,16 16,8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><div class="svc-title">Dry Van Transportation</div><p class="svc-desc">Dependable dry van freight transport for regular shipping needs across the continental US.</p><span class="svc-arr">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg></span></div>
+      <div class="svc-card reveal"><div class="svc-num">02</div><div class="svc-icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></div><div class="svc-title">Regional & OTR</div><p class="svc-desc">Flexible routes — from regional lanes to full long-haul over-the-road freight movement.</p><span class="svc-arr">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg></span></div>
+      <div class="svc-card reveal"><div class="svc-num">03</div><div class="svc-icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="svc-title">Dedicated Freight</div><p class="svc-desc">Consistent, reliable capacity for shippers who need scheduled, predictable coverage.</p><span class="svc-arr">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg></span></div>
+      <div class="svc-card reveal"><div class="svc-num">04</div><div class="svc-icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 3.09 4.23 2 2 0 0 1 5.07 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L9.91 9.91a16 16 0 0 0 6 6z"/></svg></div><div class="svc-title">24/7 Dispatch</div><p class="svc-desc">Around-the-clock load coordination and proactive communication from start to finish.</p><span class="svc-arr">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg></span></div>
+      <div class="svc-card reveal"><div class="svc-num">05</div><div class="svc-icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="svc-title">Real-Time Tracking</div><p class="svc-desc">Stay informed with live load updates and clear status communication throughout transit.</p><span class="svc-arr">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg></span></div>
+      <div class="svc-card reveal"><div class="svc-num">06</div><div class="svc-icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="svc-title">Driver Recruiting</div><p class="svc-desc">We're always looking for professional CDL drivers to join our safety-first team.</p><span class="svc-arr">Apply now <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section class="section section-alt" id="about">
+  <div class="container">
+    <div class="about-layout">
+      <div class="about-img-col reveal-left">
+        <img src="assets/truck-2.jpg" alt="VIS INC truck"/>
+        <div class="about-badge"><strong>USDOT</strong><span>3842928</span></div>
+      </div>
+      <div class="reveal-right">
+        <span class="sec-tag">About VIS INC</span>
+        <h2 class="sec-h">Built on Trust.<br>Driven by Results.</h2>
+        <p>VIS INC is a professional trucking company based in Aurora, IL. We're focused on dependable freight movement, responsive operations, and clear communication from day one.</p>
+        <p>We help shippers and drivers alike — faster response, cleaner operations, and a team that takes pride in every load delivered.</p>
+        <ul class="check-list">
+          <li>Reliable freight coverage across 48 states</li>
+          <li>Professional dispatch and load coordination</li>
+          <li>Safety-first operations on every route</li>
+          <li>Driver-focused culture and daily support</li>
+          <li>Aurora, IL based — Midwest to anywhere</li>
+        </ul>
+        <div class="about-btns">
+          <a href="#contact" class="btn btn-navy btn-lg">Work With Us</a>
+          <a href="tel:+19454006416" class="btn btn-outline-navy btn-lg">Call (945) 400-6416</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HIRING PROCESS ═══ -->
+<section class="section process-section" id="process">
+  <div class="container">
+    <div class="center reveal">
+      <span class="sec-tag">Join Our Team</span>
+      <h2 class="sec-h">Hiring Process<br>With VIS INC</h2>
+      <p class="sec-p">Four simple steps to start your career as a professional driver with us.</p>
+    </div>
+    <div class="process-layout">
+      <div class="process-steps">
+        <div class="process-step reveal">
+          <div class="ps-num">01</div>
+          <div class="ps-body"><h4>Submit an Online Application</h4><p>Fill out our quick driver application with your basic info and experience level. Takes under 3 minutes.</p></div>
+        </div>
+        <div class="process-step reveal">
+          <div class="ps-num">02</div>
+          <div class="ps-body"><h4>Phone Screen with Recruiter</h4><p>A VIS INC recruiter will call you within 24 hours to walk through details and answer your questions.</p></div>
+        </div>
+        <div class="process-step reveal">
+          <div class="ps-num">03</div>
+          <div class="ps-body"><h4>Safety Department Approval</h4><p>Our safety team reviews your MVR and verifies your CDL credentials. Fast, professional process.</p></div>
+        </div>
+        <div class="process-step reveal">
+          <div class="ps-num">04</div>
+          <div class="ps-body"><h4>Get On The Road</h4><p>Orientation, load assignment, and you're rolling. Welcome to the VIS INC family.</p></div>
+        </div>
+        <div style="margin-top:32px"><a href="#contact" class="btn btn-sky btn-lg">Apply to Drive Today</a></div>
+      </div>
+      <div class="process-visual reveal-right">
+        <img src="assets/truck-3.jpg" alt="VIS INC truck on the road"/>
+        <div class="process-visual-overlay"></div>
+        <a href="#contact" class="btn btn-sky process-cta">Start Your Application →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PARTNERS ═══ -->
+<div class="partners-section">
+  <div class="container">
+    <div class="partners-header reveal">
+      <h2>Trusted <span>Partners</span><br>& Clients</h2>
+      <div class="partners-divider"></div>
+      <p class="partners-sub">VIS INC proudly serves leading brands and businesses across the United States. Reliable freight for industry-leading companies.</p>
+    </div>
+  </div>
+  <div class="partners-track-wrap">
+    <div class="partners-track" id="ptrack">
+      <div class="partner-logo"><span>Walmart</span></div>
+      <div class="partner-logo"><span>Walgreens</span></div>
+      <div class="partner-logo"><span>Kroger</span></div>
+      <div class="partner-logo"><span>Ford</span></div>
+      <div class="partner-logo"><span>Quaker</span></div>
+      <div class="partner-logo"><span>Gerdau</span></div>
+      <div class="partner-logo"><span>USS</span></div>
+      <div class="partner-logo"><span>Atlas Tube</span></div>
+      <div class="partner-logo"><span>James Hardie</span></div>
+      <div class="partner-logo"><span>Sterling</span></div>
+      <div class="partner-logo"><span>Pepsi</span></div>
+      <div class="partner-logo"><span>Tesla</span></div>
+      <!-- duplicate for infinite scroll -->
+      <div class="partner-logo"><span>Walmart</span></div>
+      <div class="partner-logo"><span>Walgreens</span></div>
+      <div class="partner-logo"><span>Kroger</span></div>
+      <div class="partner-logo"><span>Ford</span></div>
+      <div class="partner-logo"><span>Quaker</span></div>
+      <div class="partner-logo"><span>Gerdau</span></div>
+      <div class="partner-logo"><span>USS</span></div>
+      <div class="partner-logo"><span>Atlas Tube</span></div>
+      <div class="partner-logo"><span>James Hardie</span></div>
+      <div class="partner-logo"><span>Sterling</span></div>
+      <div class="partner-logo"><span>Pepsi</span></div>
+      <div class="partner-logo"><span>Tesla</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section class="testimonials-section">
+  <div class="container">
+    <div class="center reveal">
+      <span class="sec-tag sec-tag-w">What Drivers Say</span>
+      <h2 class="sec-h sec-h-w">Driver Testimonials</h2>
+      <p class="sec-p sec-p-w">Real feedback from the professionals who drive with VIS INC every day.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testi-text">"The dispatch team at VIS INC is the best I've worked with. Always reachable, always professional. They actually care about their drivers."</p>
+        <div class="testi-author"><div class="testi-avatar">MR</div><div><div class="testi-name">Marcus R.</div><div class="testi-role">OTR Driver · 3 years with VIS</div></div></div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testi-text">"I've driven for several carriers. VIS INC stands out — the communication is clear, loads are consistent, and I always know what's next."</p>
+        <div class="testi-author"><div class="testi-avatar">DL</div><div><div class="testi-name">David L.</div><div class="testi-role">Regional Driver · 2 years with VIS</div></div></div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testi-text">"Applying was quick and easy. Within a day I had a recruiter on the phone. Within a week I was on my first load. Zero runaround."</p>
+        <div class="testi-author"><div class="testi-avatar">JT</div><div><div class="testi-name">James T.</div><div class="testi-role">Dry Van Driver · 1 year with VIS</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="section section-alt" id="faq">
+  <div class="container">
+    <div class="faq-layout">
+      <div class="faq-sticky reveal-left">
+        <span class="sec-tag">Common Questions</span>
+        <h2 class="sec-h">Frequently<br>Asked<br>Questions</h2>
+        <p>Got more questions? We're happy to help.</p>
+        <a href="tel:+19454006416" class="btn btn-navy btn-lg" style="margin-top:8px">Call (945) 400-6416</a>
+      </div>
+      <div class="faq-list reveal-right" id="faqList">
+        <div class="faq-item open">
+          <div class="faq-q"><span class="faq-q-text">What CDL license do I need to drive for VIS INC?</span><div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+          <div class="faq-a"><div class="faq-a-inner">You'll need a valid Class A CDL. We work with experienced drivers and those newer to the road — just reach out and we'll discuss your specific situation.</div></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><span class="faq-q-text">How soon can I start after applying?</span><div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+          <div class="faq-a"><div class="faq-a-inner">Our process is fast. Most drivers complete screening and are assigned their first load within 3–5 business days of submitting their application.</div></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><span class="faq-q-text">What states do VIS INC drivers run?</span><div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+          <div class="faq-a"><div class="faq-a-inner">We operate across 48 continental US states. Based out of Aurora, IL, our drivers run both Midwest-heavy regional routes and full OTR long-haul lanes.</div></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><span class="faq-q-text">Is there 24/7 dispatch support available?</span><div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+          <div class="faq-a"><div class="faq-a-inner">Yes. Our dispatch team is available around the clock to support drivers on the road, coordinate loads, and handle any issues that come up during transit.</div></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><span class="faq-q-text">What type of freight does VIS INC haul?</span><div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+          <div class="faq-a"><div class="faq-a-inner">We primarily haul dry van freight — general commodities, retail goods, manufacturing materials, and more for businesses across the country.</div></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><span class="faq-q-text">How do I contact VIS INC about shipping?</span><div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+          <div class="faq-a"><div class="faq-a-inner">Call us at (945) 400-6416 or email it@vistrans.net. You can also use the contact form below to describe your freight needs and we'll respond quickly.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT + DRIVER FORM ═══ -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="contact-layout">
+      <div class="reveal-left">
+        <span class="sec-tag">Get In Touch</span>
+        <h2 class="sec-h">Contact<br>VIS INC</h2>
+        <p class="sec-p" style="margin-bottom:32px">Ready to move freight or join our team? Reach out — we respond fast.</p>
+        <div class="contact-cards">
+          <a href="tel:+19454006416" class="cc">
+            <div class="cc-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 3.09 4.23 2 2 0 0 1 5.07 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L9.91 9.91a16 16 0 0 0 6 6z"/></svg></div>
+            <div><strong>Phone</strong><span>(945) 400-6416</span></div>
+          </a>
+          <a href="mailto:it@vistrans.net" class="cc">
+            <div class="cc-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><strong>Email</strong><span>it@vistrans.net</span></div>
+          </a>
+          <div class="cc">
+            <div class="cc-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><strong>Address</strong><span>75 Executive Dr Ste 425C<br>Aurora, IL 60504</span></div>
+          </div>
+          <div class="cc">
+            <div class="cc-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 13h4"/></svg></div>
+            <div><strong>USDOT</strong><span>3842928</span></div>
+          </div>
+        </div>
+        <div style="margin-top:32px;border-radius:14px;overflow:hidden;box-shadow:0 8px 30px rgba(13,45,94,0.12)">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2976.3348559263427!2d-88.22161872354569!3d41.75643767302209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880ef9dad405c09b%3A0xd45a7378ddafc723!2s75%20Executive%20Dr%2C%20Aurora%2C%20IL%2060504!5e0!3m2!1sen!2sus!4v1777584077946" width="100%" height="240" style="border:0;display:block" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <div class="dform-wrap reveal-right">
+        <h3>Apply to Drive</h3>
+        <p class="fsub">Join our growing team of professional CDL drivers.</p>
+        <form id="driverForm" class="fg">
+          <div class="fr2">
+            <div class="field"><label>First Name</label><input type="text" placeholder="John" required></div>
+            <div class="field"><label>Last Name</label><input type="text" placeholder="Doe" required></div>
+          </div>
+          <div class="field"><label>Email Address</label><input type="email" placeholder="john@email.com" required></div>
+          <div class="fr2">
+            <div class="field"><label>Phone Number</label><input type="tel" placeholder="(555) 000-0000"></div>
+            <div class="field"><label>Zip Code</label><input type="text" placeholder="60504"></div>
+          </div>
+          <div class="field"><label>CDL Experience</label>
+            <select required>
+              <option value="">Select experience</option>
+              <option>0–1 year</option><option>1–3 years</option><option>3+ years</option>
+            </select>
+          </div>
+          <div class="field"><label>How did you hear about us?</label>
+            <select>
+              <option value="">Select</option>
+              <option>Google Search</option><option>Indeed / Job Board</option>
+              <option>Social Media</option><option>Referral</option><option>Other</option>
+            </select>
+          </div>
+          <label class="consent-row">
+            <input type="checkbox" required>
+            <span>By submitting, I consent to be contacted by VIS INC about driving opportunities via phone, text, or email.</span>
+          </label>
+          <button type="submit" class="btn-submit-form">Submit Application</button>
+          <a href="tel:+19454006416" class="btn-call-alt">📞 Call a Recruiter Instead</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img src="assets/vis-logo.jpg" alt="VIS INC"/>
+        <p>Professional trucking and freight transportation across the United States, based in Aurora, IL.</p>
+        <div class="footer-links-quick">
+          <a href="tel:+19454006416">(945) 400-6416</a>
+          <a href="mailto:it@vistrans.net">it@vistrans.net</a>
+        </div>
+        <p class="footer-dot">USDOT 3842928</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/Aff-Trans-LLC" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/aff_holding" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@afftrans_llc" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.17 8.17 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#about">About VIS INC</a>
+        <a href="#services">Our Services</a>
+        <a href="#process">Drive With Us</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services">Dry Van</a>
+        <a href="#services">Regional & OTR</a>
+        <a href="#services">Dedicated Freight</a>
+        <a href="#services">Dispatch Support</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">SMS Consent Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 VIS INC. All rights reserved. Aurora, IL 60504.</span>
+      <span>Professional Freight Transportation</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mob-bar">
+  <a href="tel:+19454006416" class="btn btn-outline" style="flex:1;font-size:13px">📞 Call Now</a>
+  <a href="#contact" class="btn btn-sky" style="flex:1;font-size:13px">Apply to Drive</a>
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
